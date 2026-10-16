@@ -10,14 +10,14 @@
 
 ## Установка зависимостей
 pip install -r requirements.txt
-Запуск тестов
-# Обычный запуск
+### Запуск тестов
+#### Обычный запуск
 pytest tests/test_yandex_form.py -v
 
-# Параллельный запуск
+#### Параллельный запуск
 pytest tests/test_yandex_form.py -n 2 -v
 
-# С генерацией Allure отчетов
+#### С генерацией Allure отчетов
 pytest --alluredir=allure-results
 allure serve allure-results
 Структура проекта
