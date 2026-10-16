@@ -22,8 +22,13 @@ pytest --alluredir=allure-results
 allure serve allure-results
 
 ## Структура проекта
+
 lab6_automation/
+
 ├── pages/           # Page Object классы
+
 ├── tests/           # Тестовые сценарии
+
 ├── conftest.py      # Конфигурация pytest
+
 └── requirements.txt # Зависимости проекта
