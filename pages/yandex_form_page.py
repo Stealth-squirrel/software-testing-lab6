@@ -56,6 +56,13 @@ class YandexFormPage:
         )
         return first_result.text
     
+    def get_results_text(self):      
+        """Получить текст результата поиска"""
+        results = self.wait.until(
+            EC.visibility_of_element_located(self.SEARCH_RESULTS)
+        )
+        return results.text
+    
     def perform_search(self, search_text):
         """Выполнить полный цикл поиска"""
         (self.enter_search_text(search_text)

@@ -21,10 +21,10 @@ class TestYandexSearch:
             form_page.perform_search(search_query)
         
         with allure.step("Проверить наличие результатов поиска"):
-            first_result = form_page.get_first_result_text()
-            assert first_result is not None, "Результаты поиска не отобразились"
-            assert expected_text.lower() in first_result.lower(), \
-                f"Ожидаемый текст '{expected_text}' не найден в результате: '{first_result}'"
+            results_text = form_page.get_results_text()
+            assert results_text is not None, "Результаты поиска не отобразились"
+            assert expected_text.lower() in results_text.lower(), \
+                f"Ожидаемый текст '{expected_text}' не найден в результате: '{results_text}'"
     
     @allure.title("Тест отображения подсказок при вводе")
     def test_suggest_display(self, browser, base_url):
