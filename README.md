@@ -20,7 +20,8 @@ pytest tests/test_yandex_form.py -n 2 -v
 #### С генерацией Allure отчетов
 pytest --alluredir=allure-results
 allure serve allure-results
-Структура проекта
+
+## Структура проекта
 lab6_automation/
 ├── pages/           # Page Object классы
 ├── tests/           # Тестовые сценарии
